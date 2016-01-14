@@ -1,0 +1,12 @@
+*indent.txt* A Vim indent script for writing correctly indented newlisp code
+
+                                                                       *newlisp-yasi*
+====================================================================================
+
+                                                                 *g:newlisp_maxlines*
+
+Number of lines above to look back when calculating the lines's indentation. The
+larger the value the laggier the indentation will be.
+>
+    " Default
+    let g:newlisp_maxlines = 50
