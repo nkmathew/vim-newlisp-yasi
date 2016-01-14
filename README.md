@@ -26,13 +26,13 @@ pip install yasi
 Use your plugin manager of choice.
 
 - [Pathogen](https://github.com/tpope/vim-pathogen)
-  - `git clone https://github.com/nkmathew/vim-yasi ~/.vim/bundle/vim-yasi`
+  - `git clone https://github.com/nkmathew/vim-newlisp-yasi ~/.vim/bundle/vim-newlisp-yasi`
 - [Vundle](https://github.com/gmarik/vundle)
-  - Add `Bundle 'https://github.com/nkmathew/vim-yasi'` to .vimrc
+  - Add `Bundle 'https://github.com/nkmathew/vim-newlisp-yasi'` to .vimrc
   - Run `:BundleInstall`
 - [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  - Add `NeoBundle 'https://github.com/nkmathew/vim-yasi'` to .vimrc
+  - Add `NeoBundle 'https://github.com/nkmathew/vim-newlisp-yasi'` to .vimrc
   - Run `:NeoBundleInstall`
 - [vim-plug](https://github.com/junegunn/vim-plug)
-  - Add `Plug 'https://github.com/nkmathew/vim-yasi'` to .vimrc
+  - Add `Plug 'https://github.com/nkmathew/vim-newlisp-yasi'` to .vimrc
   - Run `:PlugInstall`
