@@ -9,9 +9,10 @@ if !has('python')
   finish
 endif
 
-if exists('*GetNewLispIndent')
-  finish
+if exists("b:did_indent")
+	finish
 endif
+let b:did_indent = 1
 
 python import yasi
 
@@ -82,4 +83,4 @@ setlocal shiftwidth=2
 setlocal expandtab
 setlocal indentkeys=!,o,O
 
-au filetype newlisp setlocal indentexpr=GetNewLispIndent()
+setlocal indentexpr=GetNewLispIndent()
