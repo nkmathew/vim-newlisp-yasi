@@ -21,6 +21,9 @@ or so.
 pip install yasi
 ```
 
+### Proof of life
+![Mini Demo](http://i.imgur.com/JhQbXFp.png)
+
 ### Installation
 
 Use your plugin manager of choice.
