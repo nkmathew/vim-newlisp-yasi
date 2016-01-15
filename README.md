@@ -27,12 +27,12 @@ Use your plugin manager of choice.
 
 - [Pathogen](https://github.com/tpope/vim-pathogen)
   - `git clone https://github.com/nkmathew/vim-newlisp-yasi ~/.vim/bundle/vim-newlisp-yasi`
-- [Vundle](https://github.com/gmarik/vundle)
-  - Add `Bundle 'https://github.com/nkmathew/vim-newlisp-yasi'` to .vimrc
-  - Run `:BundleInstall`
+- [Vundle](https://github.com/VundleVim/Vundle.vim)
+  - Add `Plugin 'nkmathew/vim-newlisp-yasi'` to .vimrc
+  - Run `:PluginInstall`
 - [NeoBundle](https://github.com/Shougo/neobundle.vim)
-  - Add `NeoBundle 'https://github.com/nkmathew/vim-newlisp-yasi'` to .vimrc
+  - Add `NeoBundle 'nkmathew/vim-newlisp-yasi'` to .vimrc
   - Run `:NeoBundleInstall`
 - [vim-plug](https://github.com/junegunn/vim-plug)
-  - Add `Plug 'https://github.com/nkmathew/vim-newlisp-yasi'` to .vimrc
+  - Add `Plug 'nkmathew/vim-newlisp-yasi'` to .vimrc
   - Run `:PlugInstall`
