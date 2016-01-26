@@ -67,7 +67,7 @@ func! GetNewLispIndent()
   endfor
   let escaped_code = escape(new_code, "\"'")
   let escaped_code = substitute(escaped_code, '\n', '\\n', 'g')
-  let escaped_code = printf("yasi.indent_code('%s', '--no-compact')", escaped_code)
+  let escaped_code = printf("yasi.indent_code('%s', '--dialect=newlisp --no-compact')", escaped_code)
   let open_brackets = pyeval(escaped_code).bracket_locations
   if open_brackets == []
     return 0
