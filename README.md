@@ -5,6 +5,9 @@ relies on [yasi](http://github.com/nkmathew/yasi-sexp-indenter) for calculating 
 line's correct indentation and hence will require your version of Vim to be built
 with python support.
 
+It also relies on styling provided by [this newlisp syntax plugin][plugin1]
+originally hosted [here][plugin2]
+
 ### Some shortcomings
 It's a bit laggy compared to the normal indent script implemented in pure Vimscript
 like the Clojure one. The slight lag is probably due to the fact that it has to call
@@ -39,3 +42,6 @@ Use your plugin manager of choice.
 - [vim-plug](https://github.com/junegunn/vim-plug)
   - Add `Plug 'nkmathew/vim-newlisp-yasi'` to .vimrc
   - Run `:PlugInstall`
+
+[plugin1]: https://github.com/vim-scripts/newlisp
+[plugin2]: http://slobin.ru/vim/syntax/newlisp.vim
