@@ -3,6 +3,7 @@
 " Author:      nkmathew <kipkoechmathew@gmail.com>
 " URL:         https://github.com/nkmathew/vim-newlisp-yasi
 " License:     Same as Vim
+" Version:     v0.2.1
 " Last Change: 2016-01-15
 
 if !has('python')
