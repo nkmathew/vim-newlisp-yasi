@@ -21,7 +21,7 @@ if !exists('g:newlisp_maxlines')
 endif
 
 
-func! s:SyntaxName(line, col)
+func! SyntaxName(line, col)
   let _line = (a:line == '.') ? line(a:line) : a:line
   let _col = (a:col == '.') ? col(a:col) : a:col
   return synIDattr(synID(_line, _col, 0), 'name')
@@ -43,7 +43,6 @@ func! GetNewLispIndent()
   " Build a new string ignoring any newlisp string literals os that they don't
   " get evaluated should the stopping line happen to be inside one
   let new_code = ''
-  let seen_string = 0
   let _col = 0
   let _line = lstop
   let characters = split(code, '\zs')
@@ -53,27 +52,25 @@ func! GetNewLispIndent()
       let _col = 0
       let _line += 1
     endif
-    if s:SyntaxName(_line, _col) =~ 'string'
-      if !seen_string
-        " Add some dummy value to represent the whole string as it's not going to
-        " affect the indentation
-        let new_code = new_code . '000'
-      endif
-      let seen_string = 1
+    if SyntaxName(_line, _col) =~ 'string'
+      " Add some dummy value to represent the whole string as it's not going to
+      " affect the indentation
+      let new_code = new_code . '0'
     else
       let new_code = new_code . char
-      let seen_string = 0
     endif
   endfor
   let escaped_code = escape(new_code, "\"'")
   let escaped_code = substitute(escaped_code, '\n', '\\n', 'g')
   let escaped_code = printf("yasi.indent_code('%s', '--dialect=newlisp --no-compact')", escaped_code)
   let open_brackets = pyeval(escaped_code).bracket_locations
+  let indent = -1
   if open_brackets == []
-    return 0
+    let indent = 0
   else
-    return open_brackets[-1].indent_level
+    let indent = open_brackets[-1].indent_level
   endif
+  return indent
 endfunc
 
 setlocal noautoindent
