@@ -18,7 +18,7 @@ let b:did_indent = 1
 python import yasi
 
 if !exists('g:newlisp_maxlines')
-  let g:newlisp_maxlines = 50
+  let g:newlisp_maxlines = 100
 endif
 
 
