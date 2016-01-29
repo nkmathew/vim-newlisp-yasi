@@ -11,7 +11,7 @@ if !has('python')
 endif
 
 if exists("b:did_indent")
-	finish
+  finish
 endif
 let b:did_indent = 1
 
